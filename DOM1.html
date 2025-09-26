@@ -1,0 +1,53 @@
+<!-- designing <code></code> -->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>DOM Examples</title>
+</head>
+<body>
+    <div class="container">
+        <h1 id="container1" class="title">Welcome to DOM examples</h1>
+        <p>This is a simple HTML document demonstrating the Document Object Model (DOM).</p>
+    </div>
+
+    <div class="container">
+        <h1 id="second" class="title">Welcome to DOM examples</h1>
+        <p>This is a simple HTML document demonstrating the Document Object Model (DOM).</p>
+    </div>
+    <button id ="myBTN"> Click me !</button>
+
+
+<!-- javascript code -->
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            // Get element by ID
+            let heading = document.getElementById("container1");
+            console.dir(heading);
+            heading.innerHTML = "DOM example updated!";
+
+            // Using querySelector (first .container only)
+            let firstContainer = document.querySelector(".container");
+            firstContainer.style.color = "blue";
+
+            // Using querySelectorAll
+            let allContainers = document.querySelectorAll(".container");
+            console.dir(allContainers);
+
+            allContainers.forEach(element => {
+                element.style.backgroundColor = "lightgrey";
+            });
+            let button = document.getElementById("myBTN");
+            button. addEventListener("click",()=>{
+                alert("Button clicked!");
+            });
+        });// javascript code
+       
+        
+    </script>
+</body>
+</html>
+
+
+
+
+

@@ -1,5 +1,6 @@
 function outerFun(a) {
    console.log("The value of a is: " + a);
+
    function innerFun(b) {
        console.log("The value of b is: " + b);
        return a + b;

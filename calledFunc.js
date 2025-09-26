@@ -12,3 +12,4 @@ function getdata(callbring){
     callbring(name, amt);
 }
 getdata(showdata);
+
