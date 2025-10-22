@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid Example</title>
+    <!-- Styles: this file references `main.css`. If you intended to use Bootstrap
+         for the grid classes (container-fluid, row, col-*, bg-*, etc.), uncomment
+         or replace the next line with the Bootstrap CDN link. Otherwise ensure
+         `main.css` defines the grid utilities you want. -->
+    <!-- Example Bootstrap CDN (uncomment to use Bootstrap):
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    -->
+    <link rel="stylesheet" href="main.css">
+</head>
+<body>
+
+    <!--
+        GridEx.html
+        Purpose: Demonstrate several grid layouts (3-column equal, 8/4 split,
+        responsive md columns, and mixed-width columns).
+
+        Notes about edits below:
+        - I removed a duplicate <!DOCTYPE> and extra <html> tag that were
+          present earlier to keep the document valid.
+        - I corrected obvious typos in class names (e.g., "conatiner-fluid" ->
+          "container-fluid") and fixed spacing in utility classes like
+          "mt-3" so Bootstrap (or your CSS) can match them correctly.
+        - If you want me to preserve the original typos instead of fixing them,
+          tell me and I can revert — but keeping correct class names is
+          recommended so grid styles work as intended.
+    -->
+
+    <!-- Simple equal 3-column grid -->
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col bg-info">Grid 1</div>
+            <div class="col">Grid 2</div>
+            <div class="col bg-success">Grid 3</div>
+        </div>
+    </div>
+
+    <!-- Two-column split: 8/4 -->
+    <div class="container-fluid mt-3">
+        <div class="row">
+            <div class="col-8 bg-warning">Grid 1 (col-8)</div>
+            <div class="col-4 bg-danger">Grid 2 (col-4)</div>
+        </div>
+    </div>
+
+    <!-- Three equal columns at md and up -->
+    <div class="container-fluid mt-3">
+        <div class="row">
+            <div class="col-md-4 bg-primary">Grid 1 (md-4)</div>
+            <div class="col-md-4 bg-secondary">Grid 2 (md-4)</div>
+            <div class="col-md-4 bg-warning">Grid 3 (md-4)</div>
+        </div>
+    </div>
+
+    <!-- Mixed-width columns using default col and col-md-* -->
+    <div class="container-fluid mt-4">
+        <div class="row">
+            <div class="col col-md-2 bg-info">Grid 1 (col / md-2)</div>
+            <div class="col col-md-3">Grid 2 (col / md-3)</div>
+            <div class="col col-md-7 bg-warning">Grid 3 (col / md-7)</div>
+        </div>
+    </div>
+
+</body>
+</html>
